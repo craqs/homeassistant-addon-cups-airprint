@@ -1,6 +1,6 @@
 FROM ghcr.io/hassio-addons/debian-base:7.1.0
 
-LABEL io.hass.version="1.0" io.hass.type="addon" io.hass.arch="aarch64|amd64"
+LABEL io.hass.version="1.0" io.hass.type="addon" io.hass.arch="aarch64"
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -14,13 +14,10 @@ RUN apt-get update \
         libnss-mdns \
         dbus \
         colord \
-        printer-driver-all \
         printer-driver-gutenprint \
         openprinting-ppds \
-        hpijs-ppds \
-        hp-ppd  \
-        hplip \
         printer-driver-foo2zjs \
+        printer-driver-brlaser \
         cups-pdf \
         gnupg2 \
         lsb-release \
